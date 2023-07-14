@@ -1,0 +1,31 @@
+Algorithm countVowels
+    Variables:
+        sentence: String
+        character: Character
+        vowelCount: Integer
+
+    Begin
+        sentence <- ""
+        vowelCount <- 0
+
+        While character ≠ '.'
+            character <- ReadCharacter()
+
+            If isVowel(character) Then
+                vowelCount <- vowelCount + 1
+            End If
+
+            sentence <- sentence + character
+        End While
+
+        Print "Sentence:", sentence
+        Print "Number of vowels:", vowelCount
+    End
+
+    Function isVowel(character)
+        If character = 'a' OR character = 'e' OR character = 'i' OR character = 'o' OR character = 'u' OR character = 'y' OR character = 'A' OR character = 'E' OR character = 'I' OR character = 'O' OR character = 'U' OR character = 'Y' Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
